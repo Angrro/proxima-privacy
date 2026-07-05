@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxima — Account Deletion / Ștergerea Contului</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --card: #131313;
+      --text: #e8e8e8;
+      --muted: #9a9a9a;
+      --accent: #6c8cff;
+      --border: #262626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    header h1 {
+      font-size: 28px;
+      margin: 0 0 4px;
+      letter-spacing: 0.5px;
+    }
+    header p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 24px 0 40px;
+    }
+    .lang-switch button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.15s ease;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    section.policy { display: none; }
+    section.policy.active { display: block; }
+    h2 {
+      font-size: 20px;
+      margin: 36px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2:first-of-type { margin-top: 0; }
+    p, li { color: var(--text); }
+    ol, ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .muted { color: var(--muted); font-size: 14px; }
+    .steps {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    code {
+      background: var(--card);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Proxima</h1>
+      <p>Account Deletion · Ștergerea Contului</p>
+    </header>
+
+    <div class="lang-switch">
+      <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+      <button id="btn-ro" onclick="switchLang('ro')">Română</button>
+    </div>
+
+    <!-- ================= ENGLISH ================= -->
+    <section id="policy-en" class="policy active">
+      <p class="muted">Last updated: 5 July 2026</p>
+
+      <p>This page explains how to delete your <strong>Proxima</strong> account and what happens to your data. You can delete your account in two ways.</p>
+
+      <h2>Option 1 — Delete from the app</h2>
+      <div class="steps">
+        <ol>
+          <li>Open the Proxima app and sign in.</li>
+          <li>Go to <strong>Profile</strong>.</li>
+          <li>Tap <strong>Delete account</strong> ("Șterge contul").</li>
+          <li>Confirm when prompted.</li>
+        </ol>
+      </div>
+      <p>Your account is deactivated immediately and you are signed out.</p>
+
+      <h2>Option 2 — Request by email</h2>
+      <p>If you can no longer access the app, send an email to <a href="mailto:nicolaeflorin100@gmail.com">nicolaeflorin100@gmail.com</a> from the email address associated with your Proxima account, with the subject <strong>"Delete my account"</strong>. We will process your request and delete your account.</p>
+
+      <h2>What data is deleted</h2>
+      <ul>
+        <li>Your profile information (display name, age, gender, bio).</li>
+        <li>Your profile photos (removed from our image storage, Cloudinary).</li>
+        <li>Your chat messages.</li>
+        <li>Your matches and connections.</li>
+        <li>Your location and proximity data.</li>
+        <li>Your authentication data (email) and push-notification token.</li>
+      </ul>
+
+      <h2>Timeframe</h2>
+      <p>Your account is <strong>deactivated immediately</strong> upon request. All associated personal data is <strong>permanently deleted within 30 days</strong>.</p>
+      <p>We may retain a limited amount of information only where required by law (for example, to comply with legal or security obligations). Such data is deleted once the legal retention period ends.</p>
+
+      <h2>Contact</h2>
+      <p>If you have any questions about deleting your account, contact us at <a href="mailto:nicolaeflorin100@gmail.com">nicolaeflorin100@gmail.com</a>.</p>
+    </section>
+
+    <!-- ================= ROMÂNĂ ================= -->
+    <section id="policy-ro" class="policy">
+      <p class="muted">Ultima actualizare: 5 iulie 2026</p>
+
+      <p>Această pagină explică cum îți poți șterge contul <strong>Proxima</strong> și ce se întâmplă cu datele tale. Îți poți șterge contul în două moduri.</p>
+
+      <h2>Varianta 1 — Ștergere din aplicație</h2>
+      <div class="steps">
+        <ol>
+          <li>Deschide aplicația Proxima și autentifică-te.</li>
+          <li>Mergi la <strong>Profil</strong>.</li>
+          <li>Apasă <strong>Șterge contul</strong>.</li>
+          <li>Confirmă când ți se cere.</li>
+        </ol>
+      </div>
+      <p>Contul este dezactivat imediat și ești deconectat.</p>
+
+      <h2>Varianta 2 — Solicitare prin email</h2>
+      <p>Dacă nu mai poți accesa aplicația, trimite un email la <a href="mailto:nicolaeflorin100@gmail.com">nicolaeflorin100@gmail.com</a> de pe adresa asociată contului tău Proxima, cu subiectul <strong>„Ștergere cont"</strong>. Vom procesa solicitarea și îți vom șterge contul.</p>
+
+      <h2>Ce date se șterg</h2>
+      <ul>
+        <li>Informațiile de profil (nume afișat, vârstă, gen, bio).</li>
+        <li>Pozele de profil (eliminate din stocarea de imagini, Cloudinary).</li>
+        <li>Mesajele de chat.</li>
+        <li>Potrivirile și conexiunile tale.</li>
+        <li>Datele de locație și proximitate.</li>
+        <li>Datele de autentificare (emailul) și token-ul de notificări push.</li>
+      </ul>
+
+      <h2>În cât timp</h2>
+      <p>Contul este <strong>dezactivat imediat</strong> la solicitare. Toate datele personale asociate sunt <strong>șterse definitiv în termen de 30 de zile</strong>.</p>
+      <p>Putem păstra o cantitate limitată de informații doar acolo unde legea o cere (de exemplu, pentru obligații legale sau de securitate). Aceste date sunt șterse la finalul perioadei legale de păstrare.</p>
+
+      <h2>Contact</h2>
+      <p>Dacă ai întrebări legate de ștergerea contului, contactează-ne la <a href="mailto:nicolaeflorin100@gmail.com">nicolaeflorin100@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      Proxima &middot; nicolaeflorin100@gmail.com
+    </footer>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      var en = document.getElementById('policy-en');
+      var ro = document.getElementById('policy-ro');
+      var btnEn = document.getElementById('btn-en');
+      var btnRo = document.getElementById('btn-ro');
+      var isEn = lang === 'en';
+      en.classList.toggle('active', isEn);
+      ro.classList.toggle('active', !isEn);
+      btnEn.classList.toggle('active', isEn);
+      btnRo.classList.toggle('active', !isEn);
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
