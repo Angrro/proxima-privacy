@@ -27,8 +27,31 @@
       font-family: 'Courier New', monospace;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .lang-switch button {
+      background: #131313;
+      color: #F5F5F5;
+      border: 1px solid #333;
+      padding: 8px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: 'Georgia', serif;
+      transition: all 0.15s ease;
+    }
+    .lang-switch button.active {
+      background: #E8A87C;
+      border-color: #E8A87C;
+      color: #080808;
+    }
+    section.doc { display: none; }
+    section.doc.active { display: block; }
     h1 {
       font-size: 22px;
       color: #E8A87C;
@@ -64,69 +87,162 @@
   <div class="logo">Proxima</div>
   <div class="subtitle">Child Safety Standards</div>
 
-  <h1>Child Safety & CSAM Policy</h1>
+  <div class="lang-switch">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-ro" onclick="switchLang('ro')">Română</button>
+  </div>
 
-  <p>
-    Proxima is a proximity-based dating application intended exclusively for users aged 18 and older.
-    We are deeply committed to the safety of minors and maintaining a safe environment for all users.
-  </p>
+  <!-- ================= ENGLISH ================= -->
+  <section id="doc-en" class="doc active">
+    <h1>Child Safety &amp; CSAM Policy</h1>
 
-  <hr class="divider">
+    <p>
+      Proxima is a proximity-based dating application intended exclusively for users aged 18 and older.
+      We are deeply committed to the safety of minors and maintaining a safe environment for all users.
+    </p>
 
-  <h2>1. Age Restriction</h2>
-  <p>
-    Proxima is strictly an 18+ platform. During registration, users are required to confirm they are
-    at least 18 years of age. Any account found to belong to a minor will be immediately and
-    permanently removed from the platform.
-  </p>
+    <hr class="divider">
 
-  <h2>2. Zero Tolerance for CSAM</h2>
-  <p>
-    Proxima has a strict zero-tolerance policy toward child sexual abuse material (CSAM) and any
-    content that exploits, abuses, or endangers minors. Any such content is strictly prohibited and
-    will result in immediate account termination and reporting to the relevant authorities, including
-    the National Center for Missing and Exploited Children (NCMEC) and local law enforcement.
-  </p>
+    <h2>1. Age Restriction</h2>
+    <p>
+      Proxima is strictly an 18+ platform. During registration, users are required to confirm they are
+      at least 18 years of age. Any account found to belong to a minor will be immediately and
+      permanently removed from the platform.
+    </p>
 
-  <h2>3. In-App Reporting Mechanism</h2>
-  <p>
-    Proxima provides users with the ability to report any content or behavior that raises child
-    safety concerns directly within the application. Reports can be submitted via the in-app
-    report button available in every user profile and chat conversation.
-  </p>
-  <p>
-    All reports are reviewed promptly. Content or accounts found to violate our child safety
-    policy are removed immediately and reported to the appropriate authorities.
-  </p>
+    <h2>2. Zero Tolerance for CSAM</h2>
+    <p>
+      Proxima has a strict zero-tolerance policy toward child sexual abuse material (CSAM) and any
+      content that exploits, abuses, or endangers minors. Any such content is strictly prohibited and
+      will result in immediate account termination and reporting to the relevant authorities, including
+      the National Center for Missing and Exploited Children (NCMEC) and local law enforcement.
+    </p>
 
-  <h2>4. Compliance with Applicable Laws</h2>
-  <p>
-    Proxima complies with all applicable laws and regulations regarding child safety, including
-    but not limited to the PROTECT Our Children Act and EU regulations on child sexual abuse online.
-    We are committed to cooperating fully with law enforcement agencies and regulatory bodies
-    in any investigation related to child safety.
-  </p>
+    <h2>3. In-App Reporting Mechanism</h2>
+    <p>
+      Proxima provides users with the ability to report any content or behavior that raises child
+      safety concerns directly within the application. Reports can be submitted via the in-app
+      report button available in every user profile and chat conversation.
+    </p>
+    <p>
+      All reports are reviewed promptly. Content or accounts found to violate our child safety
+      policy are removed immediately and reported to the appropriate authorities.
+    </p>
 
-  <h2>5. Reporting to Authorities</h2>
-  <p>
-    In the event that child sexual abuse material or exploitation is detected on our platform,
-    Proxima will immediately report such content to:
-  </p>
-  <p>
-    · The National Center for Missing and Exploited Children (NCMEC) CyberTipline<br>
-    · Local and national law enforcement agencies<br>
-    · Relevant regional authorities as required by law
-  </p>
+    <h2>4. Compliance with Applicable Laws</h2>
+    <p>
+      Proxima complies with all applicable laws and regulations regarding child safety, including
+      but not limited to the PROTECT Our Children Act and EU regulations on child sexual abuse online.
+      We are committed to cooperating fully with law enforcement agencies and regulatory bodies
+      in any investigation related to child safety.
+    </p>
 
-  <h2>6. Contact</h2>
-  <p>
-    For any concerns, reports, or inquiries regarding child safety on Proxima, please contact us at:
-    <br><a href="mailto:nicolaeflorin100@yahoo.com">nicolaeflorin100@yahoo.com</a>
-  </p>
+    <h2>5. Reporting to Authorities</h2>
+    <p>
+      In the event that child sexual abuse material or exploitation is detected on our platform,
+      Proxima will immediately report such content to:
+    </p>
+    <p>
+      · The National Center for Missing and Exploited Children (NCMEC) CyberTipline<br>
+      · Local and national law enforcement agencies<br>
+      · Relevant regional authorities as required by law
+    </p>
 
-  <hr class="divider">
+    <h2>6. Contact</h2>
+    <p>
+      For any concerns, reports, or inquiries regarding child safety on Proxima, please contact us at:
+      <br><a href="mailto:nicolaeflorin100@yahoo.com">nicolaeflorin100@yahoo.com</a>
+    </p>
 
-  <p class="updated">Last updated: July 2026 · Proxima · premakes.com</p>
+    <hr class="divider">
+
+    <p class="updated">Last updated: July 2026 · Proxima · premakes.com</p>
+  </section>
+
+  <!-- ================= ROMÂNĂ ================= -->
+  <section id="doc-ro" class="doc">
+    <h1>Politica privind siguranța copiilor &amp; CSAM</h1>
+
+    <p>
+      Proxima este o aplicație de dating bazată pe proximitate, destinată exclusiv utilizatorilor
+      cu vârsta de 18 ani și peste. Suntem profund dedicați siguranței minorilor și menținerii
+      unui mediu sigur pentru toți utilizatorii.
+    </p>
+
+    <hr class="divider">
+
+    <h2>1. Restricția de vârstă</h2>
+    <p>
+      Proxima este strict o platformă 18+. La înregistrare, utilizatorii trebuie să confirme că au
+      cel puțin 18 ani. Orice cont despre care se constată că aparține unui minor va fi eliminat
+      imediat și definitiv de pe platformă.
+    </p>
+
+    <h2>2. Toleranță zero față de CSAM</h2>
+    <p>
+      Proxima aplică o politică strictă de toleranță zero față de materialele privind abuzul sexual
+      asupra copiilor (CSAM) și față de orice conținut care exploatează, abuzează sau pune în pericol
+      minorii. Orice astfel de conținut este strict interzis și va duce la închiderea imediată a
+      contului și la raportarea către autoritățile competente, inclusiv National Center for Missing
+      and Exploited Children (NCMEC) și organele locale de aplicare a legii.
+    </p>
+
+    <h2>3. Mecanism de raportare în aplicație</h2>
+    <p>
+      Proxima oferă utilizatorilor posibilitatea de a raporta orice conținut sau comportament care
+      ridică preocupări legate de siguranța copiilor, direct din aplicație. Rapoartele pot fi trimise
+      prin butonul de raportare disponibil în fiecare profil de utilizator și în fiecare conversație.
+    </p>
+    <p>
+      Toate rapoartele sunt analizate cu promptitudine. Conținutul sau conturile care încalcă politica
+      noastră privind siguranța copiilor sunt eliminate imediat și raportate autorităților competente.
+    </p>
+
+    <h2>4. Conformitatea cu legile aplicabile</h2>
+    <p>
+      Proxima respectă toate legile și reglementările aplicabile privind siguranța copiilor, incluzând,
+      fără a se limita la, PROTECT Our Children Act și reglementările UE privind abuzul sexual asupra
+      copiilor online. Ne angajăm să cooperăm pe deplin cu organele de aplicare a legii și cu
+      organismele de reglementare în orice investigație legată de siguranța copiilor.
+    </p>
+
+    <h2>5. Raportarea către autorități</h2>
+    <p>
+      În cazul în care pe platforma noastră se detectează materiale privind abuzul sexual asupra
+      copiilor sau exploatarea acestora, Proxima va raporta imediat un astfel de conținut către:
+    </p>
+    <p>
+      · Linia CyberTipline a National Center for Missing and Exploited Children (NCMEC)<br>
+      · Organele locale și naționale de aplicare a legii<br>
+      · Autoritățile regionale relevante, conform cerințelor legale
+    </p>
+
+    <h2>6. Contact</h2>
+    <p>
+      Pentru orice preocupări, raportări sau întrebări legate de siguranța copiilor pe Proxima,
+      te rugăm să ne contactezi la:
+      <br><a href="mailto:nicolaeflorin100@yahoo.com">nicolaeflorin100@yahoo.com</a>
+    </p>
+
+    <hr class="divider">
+
+    <p class="updated">Ultima actualizare: iulie 2026 · Proxima · premakes.com</p>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      var en = document.getElementById('doc-en');
+      var ro = document.getElementById('doc-ro');
+      var btnEn = document.getElementById('btn-en');
+      var btnRo = document.getElementById('btn-ro');
+      var isEn = lang === 'en';
+      en.classList.toggle('active', isEn);
+      ro.classList.toggle('active', !isEn);
+      btnEn.classList.toggle('active', isEn);
+      btnRo.classList.toggle('active', !isEn);
+      document.documentElement.lang = lang;
+    }
+  </script>
 
 </body>
 </html>
